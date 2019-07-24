@@ -1,8 +1,8 @@
 package com.laibao.hello.consumer;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.laibao.hello.api.model.User;
 import com.laibao.hello.api.service.UserService;
+import org.apache.dubbo.config.annotation.Reference;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
