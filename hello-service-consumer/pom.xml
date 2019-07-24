@@ -56,6 +56,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 下面这个依赖包是可行的 测试下面的功能
+                @Reference(
+                    version = "1.0.0",
+                    application = "${dubbo.application.id}",
+                    url = "dubbo://localhost:20880"
+                )
+        -->
         <dependency>
             <groupId>com.alibaba.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
