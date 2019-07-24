@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.laibao.dubbo</groupId>
     <artifactId>dubbo-in-action</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <modules>
         <module>hello-service-api</module>
         <module>hello-service-provider</module>

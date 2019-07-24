@@ -1,8 +1,8 @@
 package com.laibao.hello.provider.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.laibao.hello.api.model.User;
 import com.laibao.hello.api.service.UserService;
-import org.apache.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;
 
 @Service(
