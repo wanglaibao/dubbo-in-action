@@ -1,6 +1,5 @@
 package com.laibao.simple.rpc.framework;
 
-import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.InvocationHandler;
@@ -55,6 +54,7 @@ public class SimpleRpcFramework {
                                     try {
                                         Method method = service.getClass().getMethod(methodName, parameterTypes);
                                         Object result = method.invoke(service, arguments);
+                                        // output.writeObject就包含了序列化这个动作了.
                                         output.writeObject(result);
                                     } catch (Throwable t) {
                                         output.writeObject(t);
