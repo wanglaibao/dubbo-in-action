@@ -8,6 +8,7 @@
         <module>hello-service-api</module>
         <module>hello-service-provider</module>
         <module>hello-service-consumer</module>
+        <module>simple-rpc-invoker</module>
     </modules>
     <packaging>pom</packaging>
 
