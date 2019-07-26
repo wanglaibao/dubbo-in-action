@@ -8,6 +8,6 @@ import com.laibao.simple.rpc.pubinterface.HelloService;
 public class HelloServiceImpl implements HelloService {
     @Override
     public String hello(String name) {
-        return name == null ? " -----> I am fine." : "I am fine."+name;
+        return name != null ? name + " -----> I am fine." : "I am fine.";
     }
 }
