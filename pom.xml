@@ -12,6 +12,7 @@
         <module>simple-netty-rpc</module>
         <module>hello-service-provider-without-boot</module>
         <module>hello-service-consumer-without-boot</module>
+        <module>netty-in-pratice</module>
     </modules>
     <packaging>pom</packaging>
 
