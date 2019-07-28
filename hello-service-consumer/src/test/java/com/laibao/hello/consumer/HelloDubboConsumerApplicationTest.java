@@ -1,6 +1,7 @@
 package com.laibao.hello.consumer;
 
 import com.laibao.hello.api.model.User;
+import com.laibao.hello.api.service.DemoService;
 import com.laibao.hello.api.service.UserService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.junit.Test;
@@ -21,9 +22,23 @@ public class HelloDubboConsumerApplicationTest {
     )
     UserService userService;
 
+
+    @Reference(
+            version = "1.0.0",
+            application = "${dubbo.application.id}",
+            url = "dubbo://localhost:20880"
+    )
+    DemoService demoService;
+
     @Test
     public void testGetUserFromDubbo() {
         User user = userService.getUser();
         System.out.println(user);
+    }
+
+    @Test
+    public void testDemoServiceFromDubbo() {
+        String message = demoService.sayHello("金戈");
+        System.out.println(message);
     }
 }
