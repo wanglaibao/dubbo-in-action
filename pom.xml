@@ -10,6 +10,7 @@
         <module>hello-service-consumer</module>
         <module>simple-rpc-invoker</module>
         <module>simple-netty-rpc</module>
+        <module>hello-service-provider-without-boot</module>
     </modules>
     <packaging>pom</packaging>
 
