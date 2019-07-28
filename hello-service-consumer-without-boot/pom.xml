@@ -13,5 +13,21 @@
     <artifactId>hello-service-consumer-without-boot</artifactId>
     <version>1.0.0</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.laibao.dubbo</groupId>
+            <artifactId>hello-service-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+
+    </dependencies>
+
 
 </project>
