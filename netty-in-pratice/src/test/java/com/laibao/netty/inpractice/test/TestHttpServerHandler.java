@@ -13,6 +13,8 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, HttpObject msg) throws Exception {
+        System.out.println(msg.getClass());
+
         if (msg instanceof HttpRequest) {
             HttpRequest request = (HttpRequest)msg;
             System.out.println("请求的方法名称是: "+request.method().name());
@@ -32,6 +34,7 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
 
             System.out.println("我被执行了! 444");
             ctx.writeAndFlush(response);
+            ctx.channel().close();
         }
     }
 
