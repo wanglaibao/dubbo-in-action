@@ -10,15 +10,15 @@ import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import io.netty.util.CharsetUtil;
 
-public class TestSocketServerInitializer extends ChannelInitializer<SocketChannel>{
+public class TestSocketClientInitializer extends ChannelInitializer<SocketChannel>{
 
     @Override
     protected void initChannel(SocketChannel socketChannel) throws Exception {
         ChannelPipeline pipeline = socketChannel.pipeline();
-        pipeline.addLast("lengthFieldBasedFrameDecoder",new LengthFieldBasedFrameDecoder(Integer.MAX_VALUE,0,4,0,4));
-        pipeline.addLast("lengthFieldPrepender",new LengthFieldPrepender(4));
-        pipeline.addLast("stringDecoder",new StringDecoder(CharsetUtil.UTF_8));
-        pipeline.addLast("stringEncoder",new StringEncoder(CharsetUtil.UTF_8));
-        pipeline.addLast(new TestSocketServerHandler());
+        pipeline.addLast(new LengthFieldBasedFrameDecoder(Integer.MAX_VALUE,0,4,0,4));
+        pipeline.addLast(new LengthFieldPrepender(4));
+        pipeline.addLast(new StringDecoder(CharsetUtil.UTF_8));
+        pipeline.addLast(new StringEncoder(CharsetUtil.UTF_8));
+        pipeline.addLast(new TestSocketClientHandler());
     }
 }
