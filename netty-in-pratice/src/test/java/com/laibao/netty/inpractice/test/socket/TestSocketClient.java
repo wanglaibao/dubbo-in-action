@@ -17,7 +17,7 @@ public class TestSocketClient {
                     .channel(NioSocketChannel.class)  //通过反射的方式来进行创建的
                     .handler(new TestSocketClientInitializer());
             ChannelFuture channelFuture = bootstrap.connect("localhost",8899).sync();
-            channelFuture.channel().close().sync();
+            channelFuture.channel().closeFuture().sync();
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
