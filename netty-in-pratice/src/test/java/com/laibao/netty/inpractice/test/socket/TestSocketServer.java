@@ -1,6 +1,5 @@
 package com.laibao.netty.inpractice.test.socket;
 
-import com.laibao.netty.inpractice.test.httpserver.TestServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;

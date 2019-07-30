@@ -13,4 +13,10 @@ public class TestSocketClientHandler extends SimpleChannelInboundHandler<String>
         System.out.println("client output" + msg);
         ctx.writeAndFlush("from client : "+ UUID.randomUUID());
     }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
+        ctx.channel().close();
+    }
 }

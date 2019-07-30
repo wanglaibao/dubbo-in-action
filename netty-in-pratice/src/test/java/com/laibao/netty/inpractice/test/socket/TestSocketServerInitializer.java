@@ -1,6 +1,5 @@
 package com.laibao.netty.inpractice.test.socket;
 
-import com.laibao.netty.inpractice.test.httpserver.TestServerInitializer;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
