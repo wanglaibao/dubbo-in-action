@@ -15,6 +15,8 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
     protected void channelRead0(ChannelHandlerContext ctx, HttpObject msg) throws Exception {
         System.out.println(msg.getClass());
 
+        System.out.println(ctx.channel().remoteAddress());
+
         if (msg instanceof HttpRequest) {
             HttpRequest request = (HttpRequest)msg;
             System.out.println("请求的方法名称是: "+request.method().name());

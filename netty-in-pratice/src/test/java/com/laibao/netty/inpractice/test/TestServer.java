@@ -8,7 +8,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 public class TestServer {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         EventLoopGroup bossGroup = new NioEventLoopGroup();  //用来接收请求的
         EventLoopGroup workerGroup = new NioEventLoopGroup(); //用来处理任务的
 
@@ -22,8 +22,8 @@ public class TestServer {
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
-            bossGroup.shutdownGracefully();
-            workerGroup.shutdownGracefully();
+            bossGroup.shutdownGracefully().sync();
+            workerGroup.shutdownGracefully().sync();
         }
     }
 }
