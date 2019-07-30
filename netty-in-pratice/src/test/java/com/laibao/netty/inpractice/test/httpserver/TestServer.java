@@ -1,4 +1,4 @@
-package com.laibao.netty.inpractice.test;
+package com.laibao.netty.inpractice.test.httpserver;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

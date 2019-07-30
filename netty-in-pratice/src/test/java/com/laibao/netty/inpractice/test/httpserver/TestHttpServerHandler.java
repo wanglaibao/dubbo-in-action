@@ -1,4 +1,4 @@
-package com.laibao.netty.inpractice.test;
+package com.laibao.netty.inpractice.test.httpserver;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
