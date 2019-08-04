@@ -13,6 +13,7 @@
         <module>hello-service-provider-without-boot</module>
         <module>hello-service-consumer-without-boot</module>
         <module>netty-in-pratice</module>
+        <module>simple-message-push</module>
     </modules>
     <packaging>pom</packaging>
 
